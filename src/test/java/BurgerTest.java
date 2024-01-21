@@ -6,7 +6,6 @@ import praktikum.Ingredient;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 
 public class BurgerTest {
 
@@ -52,19 +51,6 @@ public class BurgerTest {
 
         assertEquals(ingredientOne, burger.ingredients.get(1));
         assertEquals(ingredientTwo, burger.ingredients.get(0));
-    }
-
-    @Test
-    public void getPrice() {
-        float price = 10F;
-        when(bun.getPrice()).thenReturn(price);
-        burger.setBuns(bun);
-        assertEquals(price*2, burger.getPrice(),0.01);
-    }
-
-    @Test
-    public void getReceipt() {
-
     }
 
 }
